@@ -1,0 +1,33 @@
+name: email_tracking
+description: Track email open rates, click-through rates, and reply status.
+
+input_schema:
+  type: object
+  properties:
+    email_id:
+      type: string
+    tracking_id:
+      type: string
+
+output_schema:
+  type: object
+  properties:
+    opened:
+      type: boolean
+    clicked:
+      type: boolean
+    replied:
+      type: boolean
+    engagement_score:
+      type: number
+
+instructions: |
+  Track:
+  - Email open pixel status
+  - Link click events
+  - Reply detection
+  Calculate engagement_score:
+    open = 30
+    click = 40
+    reply = 100
+  Return engagement metrics.
