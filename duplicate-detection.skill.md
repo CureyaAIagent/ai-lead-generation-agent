@@ -1,4 +1,5 @@
-name: duplicate_detection
+---
+name: duplicate-detection
 description: Detect duplicate leads across datasets and CRM records.
 
 input_schema:
@@ -16,7 +17,7 @@ output_schema:
       type: array
     duplicates_found:
       type: number
-
+---
 instructions: |
   Identify duplicates using:
   - Exact email match
