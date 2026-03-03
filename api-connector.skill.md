@@ -1,4 +1,4 @@
-----------
+---
 name: api-connector
 description: Generic external API integration handler.
 
@@ -23,6 +23,7 @@ output_schema:
       type: object
     error:
       type: string
+---
 
 instructions: |
   Perform HTTP request based on:
