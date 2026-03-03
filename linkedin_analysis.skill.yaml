@@ -1,0 +1,28 @@
+name: linkedin_analysis
+description: Analyze LinkedIn profile credibility and activity.
+
+input_schema:
+  type: object
+  properties:
+    linkedin_url:
+      type: string
+
+output_schema:
+  type: object
+  properties:
+    profile_valid:
+      type: boolean
+    engagement_score:
+      type: number
+    summary:
+      type: string
+
+instructions: |
+  Check:
+  - Profile completeness
+  - Job history consistency
+  - Activity recency
+  - Connections estimate
+  - Professional alignment
+
+  Return credibility score (0-100).
