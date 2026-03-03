@@ -1,4 +1,5 @@
-name: crm_integration
+---
+name: crm-integration
 description: Sync qualified leads to CRM platforms like HubSpot or Zoho.
 
 input_schema:
@@ -20,6 +21,7 @@ output_schema:
       type: number
     records_updated:
       type: number
+---
 
 instructions: |
   Connect securely to selected CRM platform.
