@@ -1,4 +1,5 @@
-name: email_outreach
+---
+name: email-outreach
 description: Generate and send personalized cold outreach emails.
 
 input_schema:
@@ -18,7 +19,7 @@ output_schema:
       type: string
     send_status:
       type: string
-
+---
 instructions: |
   Generate personalized email including:
   - First name
