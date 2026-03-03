@@ -1,4 +1,5 @@
-name: contact_verification
+---
+name: contact-verification
 description: Validate email addresses, LinkedIn URLs, and websites.
 
 input_schema:
@@ -12,6 +13,7 @@ output_schema:
   properties:
     verified_leads:
       type: array
+---
 
 instructions: |
   Validate:
