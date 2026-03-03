@@ -1,0 +1,27 @@
+name: lead_scoring
+description: Assign final lead score based on all validation metrics.
+
+input_schema:
+  type: object
+  properties:
+    leads:
+      type: array
+
+output_schema:
+  type: object
+  properties:
+    scored_leads:
+      type: array
+
+instructions: |
+  Calculate weighted score:
+  - Qualification: 40%
+  - Website credibility: 20%
+  - LinkedIn credibility: 20%
+  - Email validity: 20%
+
+  Final Score: 0-100
+  Categorize:
+  - 80-100: Priority A
+  - 60-79: Priority B
+  - Below 60: Nurture
