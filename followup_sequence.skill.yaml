@@ -1,0 +1,35 @@
+name: followup_sequence
+description: Automatically schedule and generate follow-up emails.
+
+input_schema:
+  type: object
+  properties:
+    lead:
+      type: object
+    previous_email_status:
+      type: object
+    sequence_day:
+      type: number
+
+output_schema:
+  type: object
+  properties:
+    followup_subject:
+      type: string
+    followup_body:
+      type: string
+    next_followup_day:
+      type: number
+    status:
+      type: string
+
+instructions: |
+  If no open after 3 days:
+    - Generate gentle reminder email.
+  If opened but no reply:
+    - Generate value-based follow-up.
+  If clicked link:
+    - Generate high-intent follow-up.
+  Limit sequence to maximum 4 emails.
+  Maintain professional tone.
+  Keep under 120 words.
