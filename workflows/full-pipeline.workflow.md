@@ -1,4 +1,4 @@
-name: full_lead_generation_pipeline
+name: full-lead-generation-pipeline
 
 steps:
   - skill: lead_sourcing
