@@ -1,0 +1,25 @@
+name: contact_verification
+description: Validate email addresses, LinkedIn URLs, and websites.
+
+input_schema:
+  type: object
+  properties:
+    leads:
+      type: array
+
+output_schema:
+  type: object
+  properties:
+    verified_leads:
+      type: array
+
+instructions: |
+  Validate:
+  - Email format and domain existence
+  - LinkedIn URL structure
+  - Website URL format and HTTPS presence
+  Flag:
+  - invalid_email
+  - invalid_linkedin
+  - invalid_website
+  Remove leads with no valid contact path.
