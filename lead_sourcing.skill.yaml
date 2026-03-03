@@ -1,0 +1,39 @@
+name: lead_sourcing
+description: Extract potential B2B leads from provided platform URLs or search queries.
+
+input_schema:
+  type: object
+  properties:
+    search_query:
+      type: string
+    platforms:
+      type: array
+      items:
+        type: string
+
+output_schema:
+  type: object
+  properties:
+    leads:
+      type: array
+      items:
+        type: object
+        properties:
+          name:
+            type: string
+          designation:
+            type: string
+          company:
+            type: string
+          email:
+            type: string
+          linkedin_url:
+            type: string
+          website:
+            type: string
+
+instructions: |
+  Extract leads from platforms like LinkedIn, Crunchbase, AngelList, company directories, and websites.
+  Return structured JSON with complete fields.
+  Remove duplicates.
+  Ensure URLs are valid format.
