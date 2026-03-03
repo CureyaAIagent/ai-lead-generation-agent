@@ -1,0 +1,25 @@
+name: report_generator
+description: Generate structured summary report of leads.
+
+input_schema:
+  type: object
+  properties:
+    scored_leads:
+      type: array
+
+output_schema:
+  type: object
+  properties:
+    summary:
+      type: string
+    statistics:
+      type: object
+
+instructions: |
+  Generate:
+  - Total leads sourced
+  - Qualified leads
+  - Priority A count
+  - Invalid contacts removed
+  - Email outreach readiness
+  Provide executive summary.
