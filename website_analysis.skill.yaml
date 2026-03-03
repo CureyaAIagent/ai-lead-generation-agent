@@ -1,0 +1,30 @@
+name: website_analysis
+description: Analyze website legitimacy and business relevance.
+
+input_schema:
+  type: object
+  properties:
+    website:
+      type: string
+
+output_schema:
+  type: object
+  properties:
+    business_type:
+      type: string
+    active_status:
+      type: boolean
+    professionalism_score:
+      type: number
+    summary:
+      type: string
+
+instructions: |
+  Analyze:
+  - SSL security
+  - Content relevance
+  - About page presence
+  - Contact information availability
+  - Social links
+
+  Score professionalism (0-100).
