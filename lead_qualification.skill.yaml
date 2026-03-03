@@ -1,0 +1,31 @@
+name: lead_qualification
+description: Qualify leads based on ICP criteria.
+
+input_schema:
+  type: object
+  properties:
+    leads:
+      type: array
+    icp_criteria:
+      type: object
+
+output_schema:
+  type: object
+  properties:
+    qualified_leads:
+      type: array
+
+instructions: |
+  Evaluate based on:
+  - Industry match
+  - Company size
+  - Role seniority
+  - Funding stage
+  - Geography
+
+  Tag each lead:
+  - hot
+  - warm
+  - cold
+
+  Provide reasoning for qualification.
