@@ -1,0 +1,27 @@
+name: duplicate_detection
+description: Detect duplicate leads across datasets and CRM records.
+
+input_schema:
+  type: object
+  properties:
+    new_leads:
+      type: array
+    existing_leads:
+      type: array
+
+output_schema:
+  type: object
+  properties:
+    unique_leads:
+      type: array
+    duplicates_found:
+      type: number
+
+instructions: |
+  Identify duplicates using:
+  - Exact email match
+  - Fuzzy name + company match
+  - Domain + designation similarity
+  Remove duplicates from new_leads.
+  Return only unique_leads.
+  Provide count of duplicates removed.
