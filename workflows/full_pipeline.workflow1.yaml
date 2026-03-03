@@ -1,0 +1,15 @@
+name: enterprise_lead_generation_pipeline
+
+steps:
+  - skill: lead_sourcing
+  - skill: duplicate_detection
+  - skill: contact_verification
+  - skill: lead_qualification
+  - skill: linkedin_analysis
+  - skill: website_analysis
+  - skill: lead_scoring
+  - skill: crm_integration
+  - skill: email_outreach
+  - skill: email_tracking
+  - skill: followup_sequence
+  - skill: report_generator
