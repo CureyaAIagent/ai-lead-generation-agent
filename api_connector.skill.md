@@ -1,4 +1,5 @@
-name: api_connector
+----------
+name: api-connector
 description: Generic external API integration handler.
 
 input_schema:
